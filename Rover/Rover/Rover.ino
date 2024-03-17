@@ -1,16 +1,16 @@
-#define STEP1 43
-#define STEP2 45
-#define STEP3 49
-#define STEP4 47
+#define STEPPER_PIN_1 43
+#define STEPPER_PIN_2 45
+#define STEPPER_PIN_3 49
+#define STEPPER_PIN_4 47
 
 void setup() {
-    pinMode(STEP1, OUTPUT);
-    pinMode(STEP2, OUTPUT);
-    pinMode(STEP3, OUTPUT);
-    pinMode(STEP4, OUTPUT);
+    pinMode(STEPPER_PIN_1, OUTPUT);
+    pinMode(STEPPER_PIN_2, OUTPUT);
+    pinMode(STEPPER_PIN_3, OUTPUT);
+    pinMode(STEPPER_PIN_4, OUTPUT);
 }
 
 void loop() {
-    step(false);
+    step(true, STEPPER_PIN_1, STEPPER_PIN_2, STEPPER_PIN_3, STEPPER_PIN_4);
     delay(2);
 }

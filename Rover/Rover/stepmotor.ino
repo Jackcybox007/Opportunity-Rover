@@ -1,6 +1,13 @@
 int step_number = 0;
 
-void step(bool direction) {
+void halt(int STEP1, int STEP2, int STEP3, int STEP4) {
+    digitalWrite(STEP1, LOW);
+    digitalWrite(STEP2, LOW);
+    digitalWrite(STEP3, LOW);
+    digitalWrite(STEP4, LOW);
+}
+
+void step(bool direction, int STEP1, int STEP2, int STEP3, int STEP4) {
   if (direction) {
     switch (step_number) {
       case 0:
@@ -59,4 +66,12 @@ void step(bool direction) {
   if (step_number > 3) {
     step_number = 0;
   }
+}
+
+void move (int Step, bool dir, int STEP1, int STEP2, int STEP3, int STEP4) {
+    int i = 0;
+    for (i = 0; i < Step; i++) {
+        step(dir, STEP1, STEP2, STEP3, STEP4);
+        delay(2);
+    }
 }
