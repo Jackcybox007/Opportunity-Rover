@@ -11,7 +11,6 @@
 #define STEPPER_2_PIN_3 46
 #define STEPPER_2_PIN_4 48
 
-
 #define STEPPER_3_PIN_1 36
 #define STEPPER_3_PIN_2 34
 #define STEPPER_3_PIN_3 32
